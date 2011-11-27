@@ -1,0 +1,8 @@
+- title @folder.name.titleize
+
+= breadcrumbs(@folder)
+
+.container
+  %ul
+    - for item in @items
+      %li= link_to item, item

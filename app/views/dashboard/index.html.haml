@@ -1,0 +1,12 @@
+- title "Dashboard"
+
+
+%h2 Folders
+%ul
+  - for folder in @folders
+    %li= link_to folder, folder
+
+%h2 Files
+%ul
+  - for file in @files
+    %li= link_to file.attachment_file_name, file

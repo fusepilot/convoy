@@ -1,0 +1,10 @@
+- title @file.attachment_file_name
+
+= breadcrumbs(@file.folder)
+
+.container
+  = @file.attachment_content_type
+  = number_to_human_size(@file.attachment_file_size)
+  = @file.attachment_updated_at
+
+  = render :partial => @file_partial, :locals => {:file => @file}

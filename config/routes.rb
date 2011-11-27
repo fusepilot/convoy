@@ -1,5 +1,16 @@
 Convoy::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   devise_for :users
+
+  root :to => "dashboard#index"
+
+  resources :folders, :shallow => true, :except => [:new, :create] do
+    resources :folders, :only => [:new, :create]
+    resources :files, :only => [:new, :create], :as => :user_files
+  end
+
+  resources :files, :shallow => true, :only => :show, :as => :user_files
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

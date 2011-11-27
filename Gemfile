@@ -7,7 +7,6 @@ gem 'rails', '3.1.1'
 
 gem 'sqlite3'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -15,8 +14,6 @@ group :assets do
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
 end
-
-
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -35,3 +32,10 @@ gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "jquery-rails"
 gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
+
+gem "paperclip"
+gem "acts_as_tree"
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem "nifty-generators", :group => :development
+gem "navigasmic"
+

@@ -1,0 +1,9 @@
+.breadcrumbs
+  %ul
+    %li
+      = link_to "Root", root_path
+      >
+    - for ancestor in ancestors
+      %li
+        = link_to ancestor.name.titleize, ancestor
+        >
